@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Chess (Xiangqi)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chinese Chess (Xiangqi)</h1>
+        <div class="game-controls">
+            <div class="mode-selection">
+                <button id="humanVsHumanBtn" class="mode-btn active">Human vs. Human</button>
+                <button id="humanVsComputerBtn" class="mode-btn">Human vs. Computer</button>
+            </div>
+            <div class="game-buttons">
+                <button id="newGameBtn">New Game</button>
+                <button id="howToPlayBtn">How to Play</button>
+            </div>
+        </div>
+        <div class="game-area">
+            <div class="captured-pieces black">
+                <h3>Captured by Red</h3>
+                <div id="redCaptured" class="captured-container"></div>
+            </div>
+            <div class="board-container">
+                <div id="board" class="board"></div>
+                <div id="status" class="status">Red's Turn</div>
+                <div id="gameOverMessage" class="game-over-message"></div>
+            </div>
+            <div class="captured-pieces red">
+                <h3>Captured by Black</h3>
+                <div id="blackCaptured" class="captured-container"></div>
+            </div>
+        </div>
+        <div id="howToPlayModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>How to Play Chinese Chess</h2>
+                <div class="rules-content">
+                    <h3>Basic Rules:</h3>
+                    <ul>
+                        <li>The game is played between two players: Red (starts) and Black</li>
+                        <li>Each piece has its own movement pattern</li>
+                        <li>The goal is to checkmate the opponent's General (similar to King in chess)</li>
+                    </ul>
+                    <h3>Pieces and Movements:</h3>
+                    <ul>
+                        <li>General (将/帅): Moves one step horizontally or vertically within the palace</li>
+                        <li>Advisor (士/仕): Moves one step diagonally within the palace</li>
+                        <li>Elephant (象/相): Moves exactly two steps diagonally</li>
+                        <li>Horse (马): Moves one step orthogonally then one step diagonally outward</li>
+                        <li>Chariot (车): Moves any number of steps horizontally or vertically</li>
+                        <li>Cannon (炮): Moves like Chariot, but captures by jumping over exactly one piece</li>
+                        <li>Soldier (兵/卒): Moves one step forward before crossing river; after crossing can move horizontally too</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
